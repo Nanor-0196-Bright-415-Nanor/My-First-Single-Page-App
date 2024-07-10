@@ -18,7 +18,7 @@ function VanDetail() {
   return (
    
     <div className='vanDetails'>
-       { VanDetail ? 
+       { values ? 
    (
      <> 
      <h1 className='vanDetails__h1'>Description</h1>
