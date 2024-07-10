@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Home"
 import About from "./About"
 import Vans from "./Vans"
+import VanDetail from "./VanDetail"
+
+
 export default function AppRouter(){
 
 
@@ -25,6 +28,7 @@ export default function AppRouter(){
            Vans
             </Link>
 
+       
          </nav>
             <Routes>
 
@@ -41,6 +45,11 @@ export default function AppRouter(){
                 <Route 
                 path="/vans"
                element={<Vans />}
+               />  
+
+                <Route
+                path="/vans/:id"
+               element={<VanDetail />}
                />  
 
             </Routes>
