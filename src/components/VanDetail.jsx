@@ -3,7 +3,7 @@ import { useParams } from 'react-router'
 import React, { useState, useEffect } from 'react'
 
 function VanDetail() {
-    const [values,setValues] = useState([])
+    const [values,setValues] = useState(null)
     const params = useParams()
 
   useEffect(()=> {
@@ -16,12 +16,21 @@ function VanDetail() {
  
 
   return (
+   
     <div className='vanDetails'>
-    <h1 className='vanDetails__h1'>Description</h1>
+       { VanDetail ? 
+   (
+     <> 
+     <h1 className='vanDetails__h1'>Description</h1>
     <img src={values.imageUrl} className='vanDetail__img'/>
     <p className='vanDetail__type'>{values.type}</p>
-    <p className='vanDetails__description'>{values.description}  </p>
+    <p className='vanDetails__description'>{values.description} </p>
+    </>
+  )
+ : <h1>Loading.....</h1> 
+} 
     </div>
+ 
   )
 }
 
