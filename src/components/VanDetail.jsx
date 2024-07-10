@@ -27,7 +27,8 @@ function VanDetail() {
     <p className='vanDetails__description'>{values.description} </p>
     </>
   )
- : <h1>Loading.....</h1> 
+ : <h1>Loading Please .....</h1>
+
 } 
     </div>
  
